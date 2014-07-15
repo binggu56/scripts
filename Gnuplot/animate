@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# bash script to generate a gnuplot script to make a movie 
 MAX=200
 echo "clear" > plot.gpi
 echo "reset" >> plot.gpi
