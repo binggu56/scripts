@@ -1,0 +1,13 @@
+#!/bin/bash
+MAX=100
+echo "clear" > plot.gpi
+echo "reset" >> plot.gpi
+echo "set terminal gif animate delay 10 font \"/Library/Fonts/Georgia.ttf, 11\"" >> plot.gpi
+echo "set output \"animate.gif\"" >> plot.gpi
+echo "set isosample 40" >> plot.gpi
+echo "set hidden3d" >> plot.gpi
+for i in `seq 0 ${MAX}`
+do
+echo "splot sin(${i}*x/${MAX})*cos(${i}*y/${MAX})" \
+>> plot.gpi
+done
